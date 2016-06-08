@@ -39,8 +39,8 @@ io.on('connection', function(socket) {
    * @param  msg : Los datos enviados desde el cliente a 
    *               través del socket.
    */
-  socket.on('chat message', function(msg) {
-    io.emit('chat message', msg);
+  socket.on('chat message', function(msg,hora,minuto) {
+    io.emit('chat message', msg,hora,minuto);
   });
   
   /**
